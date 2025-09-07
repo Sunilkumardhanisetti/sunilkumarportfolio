@@ -1,0 +1,393 @@
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #4facfe, #00f2fe); /* nice gradient */
+  padding: 10px 12px;
+  
+}
+.logo{
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .hero{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  padding:60px 80px;
+}
+.hero-text{
+  max-width:50%;
+}
+.hero-text h1{
+  font-size:2.5rem;
+  margin-bottom:20px;
+}
+.hero-text h1 span{
+  color: #5b86e5;
+}
+.hero-text p{
+  font-size:1.2rem;
+  margin-bottom:30px;
+}
+.button{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.btn{
+ display: inline-block;
+  padding: 12px 20px;
+  margin-right: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  background: #4facfe;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  text-align: center;
+}
+.btn:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.8);
+}
+
+.btn-linkedin {
+   display: inline-block;
+  padding: 12px 20px;
+  margin-right: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000000;
+  background: #4facfe;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.btn-linkedin:hover {
+  background: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.8);
+}
+.hero-img img{
+  width:280px;
+  height: 280px;
+  object-fit: cover;
+  border-radius:50%;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+.about{
+  padding: 60px 80px;
+  text-align: center;
+}
+.about h2{
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5b86e5;
+}
+.skills{
+  padding: 60px 80px;
+  text-align: center;
+  background: #f1f5f9;
+
+}
+.skills h2{
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #5b86e5;
+}
+.skills-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+.skill-card {
+  padding: 15px 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  font-weight: bold;
+  color: #333;
+  transition: 0.3s;
+}
+.skill-card:hover {
+background: white;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 242, 254, 0.8);
+}
+
+.navigationbar{
+display: flex;
+gap: 20px;
+
+}
+.navigationbar a{
+    position: relative;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+.navigationbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: red;
+  transition: 0.3s ease-in-out;
+}
+.navigationbar a:hover::after {
+  width: 100%;
+}
+.navigationbar a:link{
+    color: black;
+}
+.navigationbar a:hover {
+    color: red;
+}
+p{
+
+font-size: large;
+}
+h2{
+    font-size: large;
+}
+h3{
+    font-size: large;
+}
+#skills{
+
+    font-size: large;
+}
+
+
+
+.content a:link{
+    color:blue;
+}
+ .content a:visited{
+    color:purple;  
+}
+ .content a:hover{
+    color: red;
+    text-decoration: underline;
+}
+.content a:active{
+    color: green;
+}
+ body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      
+    }
+.card-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+.content{
+    display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+  padding: 0 40px; 
+}
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 15px;
+  text-align: center;
+  width: 300px;
+  margin: 0px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 242, 254, 0.8);
+}
+
+.card img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  margin: 5px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.card a {
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.8);
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  background: rgba(0, 242, 254, 0.8);
+}
+.contact{
+   padding: 60px 80px;
+  background: #f1f5f9;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #5b86e5;
+}
+.contact a {
+  color: #5b86e5;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+    h2:hover{
+        color: red;
+    }
+    .footer{
+        text-align: center;
+        padding: 10px;
+    }
+    /* 🌐 Responsive Design */
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .hero-img img {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+  }
+
+  .button {
+    justify-content: center;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .navigationbar {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .btn,
+  .btn-linkedin {
+    width: 100%;
+    text-align: center;
+  }
+
+  .skills,
+  .about,
+  .contact {
+    padding: 40px 20px;
+  }
+
+  .skills-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .projects-container,
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+  }
+
+  .hero-img img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .btn,
+  .btn-linkedin {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+}
