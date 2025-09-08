@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sunilkumar Dhanisetti — Portfolio</title>
    <link rel="stylesheet" href="styles.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
   <div class="navbar">
     <div class="logo">Portfolio</div>
-      <div class="navigationbar">
+      <div class="navigationbar" id="navLinks">
+      <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
       <a href="#contact">Contact</a>
       </div>
+       <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
-<section class="hero">
+<section id="home" class="home">
 <div class="hero-text">
-  <h1>Hi, I'm <span>Sunil Kumar Dhanisetti</span></h1>
+  <h1 class="fade-in-up">Hi, I'm <span>Sunil Kumar Dhanisetti</span></h1>
   <p>Aspiring Full Stack Developer | Java | Flutter | HTML&CSS</p>
   <div class="button">
     <a href="resume/Sunilkumardhanisetti.pdf" download  class="btn">Download Resume</a>
@@ -36,8 +43,8 @@
     <!-- About -->
     <section id="about" class="about">
       <h2>About Me</h2>
-      <p>I'm an MCA Post Graduate passionate about building modern, responsive web applications.  
-      I have experience in Java, Flutter, and front-end technologies. My goal is to become a full stack developer and create impactful solutions.</p>
+      <p>I’m an MCA Post Graduate with a strong passion for building modern, responsive, and user-friendly web applications. My expertise includes Java, Flutter, and front-end technologies (HTML, CSS, JavaScript), and I am currently growing my skills in full stack development. I enjoy solving complex problems with clean, efficient code and continuously learning new technologies to stay updated in the fast-evolving tech industry.</p>
+       <p> My goal is to become a skilled Full Stack Developer and contribute to impactful projects that make a difference. I believe in writing scalable and maintainable software, collaborating effectively within teams, and delivering high-quality solutions. Beyond coding, I enjoy exploring new tools, enhancing my problem-solving abilities, and sharing knowledge with others in the developer community.</p>
     </section>
 
     <!-- Skills -->
@@ -53,7 +60,7 @@
     </section>
 
     <!-- Projects -->
-     <section id="projects">
+     <section id="projects" class="projects">
      <h2 style="text-align: center;">Projects</h2>
     <div class="content">
       <article>
@@ -61,8 +68,8 @@
         <div class="card-container">
           <div class="card">
            <img src="images/crypto/cryptoprices.jpg" alt="card1">
-           <p>Crypto Price App</p>
-           <a href="https://github.com/Sunilkumardhanisetti/crypto_price_app">Link</a>
+           <p>A mobile app developed with Flutter to display real-time cryptocurrency prices. It fetches live market data from APIs and presents it in a clean, user-friendly interface.</p>
+           <a href="https://github.com/Sunilkumardhanisetti/crypto_price_app">GitHub Link</a>
           </div>
         </div>
       </article>
@@ -72,8 +79,8 @@
         <div class="card-container">
           <div class="card">
             <img src="images/crypto/electric-vehicle-charging.jpg" alt="card1">
-        <p>Flutter app with Google Maps integration</p>
-        <a href="https://github.com/Sunilkumardhanisetti/ev_charging_station_finder">Link</a>
+        <p>A Flutter-based mobile app that helps electric vehicle users easily find nearby charging stations. It integrates Google Maps API, geolocation, and offline support using SQLite to provide real-time and seamless access to charging stations.</p>
+        <a href="https://github.com/Sunilkumardhanisetti/ev_charging_station_finder">GitHub Link</a>
         </div>
         </div>
       </article>
@@ -83,7 +90,7 @@
         <div class="card-container">
           <div class="card">
             <img src="images/crypto/portfolio_logo.jpg" alt="card1">
-        <p>Static HTML portfolio</p>
+        <p>A personal website built with HTML, CSS, and JavaScript to showcase my projects, skills, and achievements. It is fully responsive, includes a modern sidebar navigation menu, and provides direct links to my work and contact information.</p>
          <a href="#">Link</a>
           </div>
           </div>
@@ -94,16 +101,37 @@
 
     <!-- Contact -->
     <section id="contact" class="contact">
-      <h2>Contact</h2>
-      <p>📧 Email: <a href="mailto:dhanisettisunilkumar0109@gmail.com">dhanisettisunilkumar0109@gmail.com</a></p>
-      <p>🔗GitHub: <a href="https://github.com/Sunilkumardhanisetti" target="_blank">github.com/your-username</a></p>
-      <p>🔗LinkedIn: <a href="https://www.linkedin.com/in/sunil-kumar-dhanisetti-a258b12a7/" target="_blank">linkedin.com/in/your-profile</a></p>
+      <div class="container">
+      <h2>Contact Me</h2>
+      <p> Feel free to reach out to me through email or connect with me on GitHub and LinkedIn.</p>
+       <div class="contact-icons">
+      <a href="mailto:dhanisettisunilkumar0109@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/Sunilkumardhanisetti" target="_blank" title="Github"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/sunil-kumar-dhanisetti-a258b12a7/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
+      </div>
     </section>
   </main>
 
   <div class="footer">
-    <p>&copy; <span id="year">2025</span> Sunil kumar Dhanisetti| Built with ❤️ using HTML & CSS</p>
+    <p>&copy; <span id="year">2025</span> Sunil kumar Dhanisetti | Built with HTML,CSS & JavaScript </p>
   </div>
+<script>
+   const hamburger = document.querySelector(".hamburger");
+  const navMenu = document.querySelector(".navigationbar");
+  const navLinks = document.querySelectorAll(".navigationbar a");
 
+  // Toggle menu when hamburger is clicked
+  hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
+  });
+
+  // Close menu when any link is clicked
+  navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      navMenu.classList.remove("active");
+    });
+  });
+</script>
 </body>
 </html>
