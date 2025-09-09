@@ -423,7 +423,7 @@ h3{
   }
 
   /* ✅ Fix project cards alignment */
-  .projects-container,
+  .projects,
   .card-container {
     display: flex;
     flex-direction: column;
@@ -432,7 +432,7 @@ h3{
     width: 100%;
   }
 
-  .project-card {
+  .card {
     width: 90%;
     max-width: 400px;
   }
