@@ -347,7 +347,7 @@ h3{
         padding: 10px;
         background: rgba(5, 122, 128, 0.8);
     }
-    /* 🌐 Responsive Design */
+   /* 🌐 Responsive Design */
 @media (max-width: 1024px) {
   .home {
     flex-direction: column;
@@ -422,10 +422,19 @@ h3{
     gap: 15px;
   }
 
+  /* ✅ Fix project cards alignment */
   .projects-container,
   .card-container {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 15px;
+    width: 100%;
+  }
+
+  .project-card {
+    width: 90%;
+    max-width: 400px;
   }
 }
 
@@ -457,9 +466,11 @@ h3{
     font-size: 0.9rem;
   }
 }
+
 .hamburger {
   display: none;
 }
+
 /* Default hide for mobile */
 .navigationbar {
   display: flex;
@@ -468,63 +479,71 @@ h3{
 
 @media (max-width: 768px) {
   .navigationbar {
-  position: fixed;
-  top: 0;
-  right: -250px; /* off-screen */
-  height: 100%;
-  width: 250px;
-  background: linear-gradient(to bottom, #4facfe, #00f2fe);
-  display: flex;
-  flex-direction: column;
-  padding-top: 80px;
-  transition: right 0.4s ease-in-out;
-  z-index: 1000;
+    position: fixed;
+    top: 0;
+    right: -250px; /* off-screen */
+    height: 100%;
+    width: 250px;
+    background: linear-gradient(to bottom, #4facfe, #00f2fe);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    transition: right 0.4s ease-in-out;
+    z-index: 1000;
+  }
+
+  .navigationbar a {
+    padding: 15px 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Show sidebar when active */
+  .navigationbar.active {
+    right: 0;
+  }
+
+  /* Hamburger icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+  }
+
+  .hamburger span {
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin: 4px 0;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+
+  /* Animate hamburger to X */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
 }
 
-.navigationbar a {
-  padding: 15px 20px;
-  text-decoration: none;
-  font-size: 18px;
-  color: black;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-/* Show sidebar when active */
-.navigationbar.active {
-  right: 0;
-}
-
-/* Hamburger icon */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 1100;
-  position: absolute; /* <-- add this */
-  top: 5px;          /* distance from top */
-  right: 20px;        /* distance from right */
-}
-
-.hamburger span {
-  height: 3px;
-  width: 25px;
-  background: black;
-  margin: 4px 0;
-  border-radius: 2px;
-  transition: 0.4s;
-}
-
-/* Animate hamburger to X */
-.hamburger.active span:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-.hamburger.active span:nth-child(2) {
-  opacity: 0;
-}
-.hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
+/* ✅ Fix: remove empty right space on mobile */
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 
