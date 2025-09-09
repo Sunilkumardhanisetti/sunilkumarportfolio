@@ -428,13 +428,16 @@ h3{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
     width: 100%;
+    padding: 0 10px; /* add a little breathing space */
+    box-sizing: border-box;
   }
 
   .card {
-    width: 90%;
+    width: 100%;
     max-width: 400px;
+    margin: 0 auto;  
   }
 }
 
