@@ -527,6 +527,7 @@ h3{
 }
 }
 
+
 /* Only show hamburger on mobile */
 @media (max-width: 768px) {
   .hamburger {
