@@ -25,8 +25,8 @@
   </div>
 </div>
 <section id="home" class="home">
-<div class="hero-text">
-  <h1 class="fade-in-up">Hi, I'm <span>Sunil Kumar Dhanisetti</span></h1>
+<div class="hero-text" >
+  <h1 class="typing">Hi, I'm <span>Sunil Kumar Dhanisetti</span></h1>
   <p>Aspiring Full Stack Developer | Java | Flutter | HTML&CSS</p>
   <div class="button">
     <a href="resume/Sunilkumardhanisetti.pdf" download  class="btn">Download Resume</a>
@@ -42,13 +42,16 @@
     
     <!-- About -->
     <section id="about" class="about">
+      <div class="fade-in">
       <h2>About Me</h2>
       <p>I’m an MCA Post Graduate with a strong passion for building modern, responsive, and user-friendly web applications. My expertise includes Java, Flutter, and front-end technologies (HTML, CSS, JavaScript), and I am currently growing my skills in full stack development. I enjoy solving complex problems with clean, efficient code and continuously learning new technologies to stay updated in the fast-evolving tech industry.</p>
        <p> My goal is to become a skilled Full Stack Developer and contribute to impactful projects that make a difference. I believe in writing scalable and maintainable software, collaborating effectively within teams, and delivering high-quality solutions. Beyond coding, I enjoy exploring new tools, enhancing my problem-solving abilities, and sharing knowledge with others in the developer community.</p>
+       </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="skills">
+      <div class="fade-in">
       <h2>Skills</h2>
       <div class="skills-container" >
         <div class="skill-card">Java (Core, OOP)</div>
@@ -56,6 +59,7 @@
         <div class="skill-card">HTML5, CSS3</div>
         <div class="skill-card">Git & GitHub</div>
         <div class="skill-card">Basics of Spring Boot</div>
+      </div>
       </div>
     </section>
 
@@ -83,6 +87,7 @@
         <a href="https://github.com/Sunilkumardhanisetti/ev_charging_station_finder">GitHub Link</a>
         </div>
         </div>
+        
       </article>
 
       <article>
@@ -101,6 +106,7 @@
 
     <!-- Contact -->
     <section id="contact" class="contact">
+      <div class="fade-in">
       <div class="container">
       <h2>Contact Me</h2>
       <p> Feel free to reach out to me through email or connect with me on GitHub and LinkedIn.</p>
@@ -108,6 +114,7 @@
       <a href="mailto:dhanisettisunilkumar0109@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
       <a href="https://github.com/Sunilkumardhanisetti" target="_blank" title="Github"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/sunil-kumar-dhanisetti-a258b12a7/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      </div>
       </div>
       </div>
     </section>
@@ -132,6 +139,15 @@
       navMenu.classList.remove("active");
     });
   });
+  const faders = document.querySelectorAll('.fade-in');
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+});
 </script>
 </body>
 </html>
